@@ -17,6 +17,28 @@ body {
     display: flex
 }
 
+.below-imgs {
+    display: flex;
+    flex-direction: row;
+    background-color: coral;
+}
+
+.showcase {
+    height: 500px;
+    width: 500px;
+    padding:30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+.showcase img {
+    max-height: 80%;
+    max-width: 80%;
+    margin: auto;
+    border: 2px solid black;
+}
 .pics_in_row img {
     max-height: 100%;
     border:2px solid black;
