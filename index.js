@@ -1,3 +1,24 @@
-fetch("https://api.openbrewerydb.org/v1/breweries?by_state=colorado&per_page=200")
-    .then((resp) => resp.json());
-    .then((json) => console.log(json))
+fetch("http://localhost:3000/breweries")
+.then(resp => resp.json())
+.then(data => {
+    //function(data)
+    fetchInfo(data)
+})
+
+function fetchInfo(Obj)
+{
+    let div = document.querySelector(".pics_in_row")
+    Obj.forEach((obj) => {
+ 
+        let img = document.createElement("img")
+        img.src = obj.logo
+        img.className = "renderedPic"
+        
+        div.append(img)
+
+
+    })
+//         console.log(player.first_name)
+//     })
+// 
+}
