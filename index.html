@@ -28,11 +28,20 @@
             <h1>Brewery Filters</h1>
             <p class="subhead">Customize your preferences below</p>
             <div class="filters">
-                <ul class="pubs"><h2>Pub types</h2></ul>
+                <h2>Pub types</h2>
+                <select class="pubFilters">
+                    <option value="all">all</option>
+                    <option value="micropubs">micropubs</option>
+                    <option value="brewpubs">brewpubs</option>
+                    <option value="large">large</option>
+                </select>
+
+                <!--<ul class="pubs"><h2>Pub types</h2></ul>
                 <li class="all">all</li>
                 <li class="micros">micros</li>
                 <li class="brewpubs">brewpubs</li>
-                <li class="large">large</li>
+                <li class="large">large</li> 
+                -->
                 <br>
                 <br>
             </div>
@@ -44,9 +53,12 @@
         </div>
         <div class="right-col">
             <div class="showcase"></div>
-
+            <div class="pubInfo"></div>
         </div>
     </main>
+    <div>
+        <h1>test</h1>
+    </div>
 </div>
     
 

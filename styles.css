@@ -91,13 +91,13 @@ main {
 .left-col {    
     align-self:flex-start;
     margin-top: 20em;
-    width: 20%;
+    width: 10%;
 }
 
 /*Mid stuff */
 .mid-col {
     margin-top: 20em;
-    width: 25%;
+    width: 10%;
 }
 /*Right stuff */
 

@@ -39,14 +39,30 @@ function fetchInfo(data)
 }
 
 function filterResults () {
-    let allLink = document.querySelector(".all")
-    let brewpubLink = document.querySelector(".brewpubs")
-    let microLink = document.querySelector(".micros")
-    let largeLink = document.querySelector(".large")
-    allLink.addEventListener("click",()=> fetchPub(all))
-    brewpubLink.addEventListener("click",() => fetchPub(brewpubs))
-    microLink.addEventListener("click", () => fetchPub(micropubs))
-    largeLink.addEventListener("click", () => fetchPub(large))
+    let pubType = document.querySelector(".pubFilters")
+    pubType.addEventListener("change", (e) => {
+        if (e.target.value === "micropubs") {
+            fetchPub(micropubs)
+        }
+        else if (e.target.value === "large") {
+            fetchPub(large)
+        }
+        else if (e.target.value === "brewpubs") {
+            fetchPub(brewpubs)
+        }
+        else if (e.target.value === "all") {
+            fetchPub(all)
+        }
+        //fetchPub(`${e.target.value}`)
+    })
+    // let allLink = document.querySelector(".all")
+    // let brewpubLink = document.querySelector(".brewpubs")
+    // let microLink = document.querySelector(".micros")
+    // let largeLink = document.querySelector(".large")
+    // allLink.addEventListener("click",()=> fetchPub(all))
+    // brewpubLink.addEventListener("click",() => fetchPub(brewpubs))
+    // microLink.addEventListener("click", () => fetchPub(micropubs))
+    // largeLink.addEventListener("click", () => fetchPub(large))
 }
 
 function fetchPub(arrayOfPubs) {
@@ -66,11 +82,21 @@ function fetchShowcase(obj) {
     let showcase = document.querySelector(".showcase")
     showcase.innerHTML=''
 
-    let h2 = document.createElement("h2")
+    let h1 = document.createElement("h1")
     //let showcaseTitle = document.querySelector(".showcaseTitle")
-    h2.textContent = obj.name    
-    showcase.prepend(h2)
+    h1.textContent = obj.name    
+    showcase.prepend(h1)
     let img = document.createElement("img")
     img.src=obj.image
     showcase.append(img)
+
+    let pubInfo = document.querySelector(".pubInfo")
+    pubInfo.innerHTML=''
+    let p = document.createElement('p')
+    p.textContent = "Address: " + obj.street + ", " + obj.city
+    let link = document.createElement('a')
+    link.setAttribute('href',obj.website_url)
+    link.textContent = "Website Link"
+    pubInfo.append(p)
+    pubInfo.append(link)
 }
