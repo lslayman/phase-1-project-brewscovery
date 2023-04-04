@@ -13,8 +13,8 @@ body {
 }
 
 header img {
-    max-width: 500px;
-    max-height: 300px;
+    max-width: 300px;
+    max-height: 200px;
     
 }
 
@@ -90,13 +90,18 @@ main {
     max-height: 100px;
     max-width: 100px;
     padding: 10px;
+    transition: transform .2s;
+}
+
+.pics_in_row img:hover {
+    transform: scale(1.5);
 }
 
 /*Left stuff */
 .left-col {    
     align-self:flex-start;
     margin-top: 20em;
-    width: 10%;
+    width: 13%;
 }
 
 /*Mid stuff */
