@@ -1,0 +1,57 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/abstract-colorful-background-with-fluid-shapes_1393-314.jpg?w=900&t=st=1680625174~exp=1680625774~hmac=44c3980d3fc18573d510890ab31b3d13198ad980a33863f659862b8bac842a00");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+.container {
+    padding: 5%;
+    width: 1000px;
+    justify-content: center;
+    margin:auto;
+
+}
+.pics_in_row {
+    height: 100px;
+    max-height: 100%;
+    width: 100px;
+    padding: 10px;
+    display: flex
+}
+
+.below-imgs {
+    display: flex;
+    flex-direction: row;
+    background: rgba(246, 227, 192, 0.8)
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.showcase {
+    height: 500px;
+    width: 500px;
+    padding:30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.showcase img {
+    max-height: 80%;
+    max-width: 80%;
+    margin: auto;
+    border: 2px solid black;
+}
+.pics_in_row img {
+    max-height: 100%;
+    padding: 8px;
+    max-width: 80px;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
