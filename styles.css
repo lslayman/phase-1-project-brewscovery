@@ -86,6 +86,9 @@ main {
     align-items: center;    
 }
 
+h1:hover {
+    transform: scale(1.15);
+}
 .pics_in_row img {
     max-height: 100px;
     max-width: 100px;
@@ -95,6 +98,7 @@ main {
 
 .pics_in_row img:hover {
     transform: scale(1.5);
+    font-weight: 900    ;
 }
 
 /*Left stuff */

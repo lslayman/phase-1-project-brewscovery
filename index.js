@@ -143,13 +143,18 @@ function fetchShowcase(obj) {
 
     let pubInfo = document.querySelector(".pubInfo")
     pubInfo.innerHTML=''
+    let type = document.createElement('p')
+    type.textContent = "Brew Type: " + obj.brewery_type
+
     let p = document.createElement('p')
     p.textContent = "Address: " + obj.street + ", " + obj.city
+
     let link = document.createElement('a')
     link.setAttribute('href',obj.website_url)
     link.textContent = "Website Link"
     let phone = document.createElement('p')
     phone.textContent = "Phone #: " + obj.phone
+    pubInfo.append(type)
     pubInfo.append(p)
     pubInfo.append(phone)
     pubInfo.append(link)
