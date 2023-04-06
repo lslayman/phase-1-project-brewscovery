@@ -144,7 +144,7 @@
       "id": 8,
       "name": "4 Noses Brewing Company",
       "brewery_type": "micro",
-      "logo": "https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/4-noses1.jpg",
+      "logo": "https://i.imgur.com/h4s2RN4.png",
       "image": "https://www.thedenverear.com/wp-content/uploads/2016/05/4Noses_Lobby.jpg",
       "address_1": "8855 W 116th Cir Ste 3",
       "address_2": null,
@@ -184,7 +184,7 @@
       "id": 10,
       "name": "7 Hermits Brewing Company",
       "brewery_type": "brewpub",
-      "logo": "https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/7-hermits-300x194.jpg",
+      "logo": "https://i.imgur.com/Xsi9FXC.png",
       "image": "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3456,w_5184,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/IMG_0860_r0jqbt.jpg",
       "address_1": "PO Box 3186",
       "address_2": null,
@@ -223,8 +223,8 @@
       "content": "awesum place"
     },
     {
-      "imageId": 1,
-      "content": "test",
+      "imageId": 4,
+      "content": "this place is okay",
       "id": 5
     },
     {
