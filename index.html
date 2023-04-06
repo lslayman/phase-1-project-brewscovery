@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Brewscovery</title>
-    <script src="index.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
+    <script>
+      window.FontAwesomeConfig = {autoReplaceSvg: "nest"}
+    </script>
+
+    <script defer src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/8f060e58e0.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class = "container">
@@ -13,14 +18,37 @@
 
       </div>
       <div class ="below-imgs">
+        <div class="rating-box">
+          <header>Rate this brewery!</header>
+          <span class="mugs" style="width: 20rem">
+            <i id="regular" class="fa-regular fa-star"></i>
+            <i id="regular" class="fa-regular fa-star"></i>
+            <i id="regular" class="fa-regular fa-star"></i>
+            <i id="regular" class="fa-regular fa-star"></i>
+            <i id="regular" class="fa-regular fa-star"></i>
+          </span>
+        </div>
+
+      
+        </div>
             <div class="filters">
-                <ul class="pubs">Pub types</ul>
+            <ul class="pubs">
                 <li class="micros">micros</li>
                 <li class="brewpubs">brewpubs</li>
                 <li class="large">large</li>
-            </div>
+            </ul>
             <div class="info"></div>
-            <div class ="showcase"></div>
+            <div class ="showcase">
+
+              <form id="brewery-form">
+                <label for="uname">Username</label><br>
+                <input type="text" id="uname" name="uname"><br>
+                <label for="comment">Add Comment</label><br>
+                <input type="text" id="comment" name="comment">
+              </form>
+
+            </div>
+        
         </div>
 
       </div>

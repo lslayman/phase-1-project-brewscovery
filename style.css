@@ -24,7 +24,7 @@ body {
 .below-imgs {
     display: flex;
     flex-direction: row;
-    background: rgba(246, 227, 192, 0.8)
+    background: rgba(246, 227, 192, 0.8);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -49,6 +49,34 @@ body {
     padding: 8px;
     max-width: 80px;
 }
+
+  .rating-box header {
+    font-size: 22px;
+    color: #210955;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+/*.mugs {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+.mugs input {
+	display: none;
+}
+
+/*.mugs label:hover,
+.mugs label:hover ~ label,
+.mugs input:hover,
+.mugs input:hover {
+	color: #210955;
+}
+
+.mugs.active {
+    color: #210955
+}*/
+
 
 h1 {
     margin-top: 0;

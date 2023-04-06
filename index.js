@@ -60,3 +60,46 @@ function fetchShowcase(obj) {
     img.src=obj.image
     showcase.append(img)
 }
+
+const beerRating = [...document.getElementsByClassName("fa-regular")]
+// const testbeer = [...document.getElementsByClassName("svg-inline--fa")]
+console.log(beerRating)
+function rateBrewery(stars) {
+    // const mugsActive = "fa-solid fa-star";
+    //const mugsInactive = "fa-regular fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((beerRating) => {
+        //beerRating.addEventListener("click", () => console.log("hello"))
+       beerRating.onclick = () => {
+        star_index = stars.indexOf(beerRating);
+        console.log(star_index)
+        for (let i = 0; i < starsLength; i++) {
+            if (i <= star_index){
+                stars[i].firstChild.setAttribute('data-prefix','fas')
+            } else {
+                stars[i].firstChild.setAttribute('data-prefix','far')
+            }
+          }
+        
+     
+            // beerRating.firstChild.setAttribute('data-prefix','fas') 
+            
+        }
+    })
+}
+rateBrewery(beerRating);
+
+function setRating(beerRating) {
+    if(beerRating.firstChild.getAttribute('data-prefix')==='far') {
+        //This changes to colored
+        beerRating.firstChild.setAttribute('data-prefix','fas')
+    } else {
+        //uncolored
+    beerRating.firstChild.setAttribute('data-prefix','far')
+   }
+}
+
+//function changeColor(stars) {
+  //  stars.
+//}
