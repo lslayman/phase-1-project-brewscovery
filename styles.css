@@ -104,24 +104,24 @@ h1:hover {
 /*Left stuff */
 .left-col {    
     margin-top: 20em;
-    border: 2px solid black;
     padding: 45px;
     border-radius: 25px;
     background-color:darksalmon;
     float: left;
     position: relative;
     left: -110px;
+    background: rgba(255, 122, 89, .7);
 }
 
 /*Mid stuff */
 .mid-col {
     margin-top: 20em;
-    border: 2px solid black;
     padding: 45px;
     border-radius: 25px;
     background-color: goldenrod;
     position: relative;
     left: -110px;
+    background: rgba(255, 122, 89, .7);
 }
 /*Right stuff */
 
@@ -134,10 +134,9 @@ h1:hover {
     margin-top: 20em;
     width: 510px;
     flex-grow: 1;
-    border: 2px solid black;
     padding: 45px;
     border-radius: 25px;
-    background-color: blanchedalmond;
     position: relative;
     left: -110px;
+    background: rgba(255, 122, 89, .7);
 }

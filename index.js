@@ -65,7 +65,6 @@ function filterResults () {
     selectAll.setAttribute('type','checkbox')
     selectAll.setAttribute('name','all')
     selectAll.checked = true
-    //selectAll.onclick = toggle(this)
     let labelAll = document.createElement('label')
     labelAll.htmlFor = "all"
     labelAll.innerHTML = "Select all"
@@ -147,11 +146,7 @@ function filterResults () {
     }
 }
 
-// function toggle(source) {
-//     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-//   for(let checkbox in checkboxes) 
-//     checkbox.checked = source.checked;
-// }
+
 function fetchPubsByCity(cityName) {
     for (let i = 0; i<listOfCities.length-1;i++) {
         if (cityName === listOfCities[i]) {
@@ -170,14 +165,6 @@ function removePubsByCity(cityName) {
                 CheckBoxObj.splice(index,1)
             }
         }
-
-        //console.log(all[i].city)
-        //let objToRemove
-        //if (cityName === all[i].city) {
-        //   all[i] = objToRemove
-        //}
-        //console.log(objToRemove)
-        //let index = CheckBoxObj.indexOf()
     }
     fetchPub(CheckBoxObj)
 
@@ -201,7 +188,6 @@ function fetchShowcase(obj) {
     showcase.innerHTML=''
 
     let h1 = document.createElement("h1")
-    //let showcaseTitle = document.querySelector(".showcaseTitle")
     h1.textContent = obj.name    
     showcase.prepend(h1)
     let img = document.createElement("img")
@@ -286,12 +272,3 @@ function fetchShowcase(obj) {
     pubInfo.append(br2)
 }
     
-        // function renderComments(comments) {
-        //     let pubInfo = document.querySelector(".pubInfo")
-        //     comments.forEach((comment) => {
-        //         let li = document.createElement("li")
-        //         li.textContent = comment.content 
-        //         pubInfo.append(li)
-        
-        //     })
-        // }
