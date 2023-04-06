@@ -271,4 +271,36 @@ function fetchShowcase(obj) {
     let br2 = document.createElement("br")
     pubInfo.append(br2)
 }
+
+//rating system
+const beerRating = [...document.getElementsByClassName("fa-regular")]
+
+
+function rateBrewery(stars) {
+    const starsLength = stars.length;
+    let i;
+    stars.map((beerRating) => {
+       beerRating.onclick = () => {
+        star_index = stars.indexOf(beerRating);
+        console.log(star_indx)
+        for (let i = 0; i < starsLength; i++) {
+            if (i <= star_index){
+                stars[i].firstChild.setAttribute('data-prefix','fas')
+            } else {
+                stars[i].firstChild.setAttribute('data-prefix','far')
+            }
+          }
+        }
+    })
+}
+rateBrewery(beerRating);
+
+function setRating(beerRating) {
+    if(beerRating.firstChild.getAttribute('data-prefix')==='far') {
+        beerRating.firstChild.setAttribute('data-prefix','fas')
+    } else {
+    beerRating.firstChild.setAttribute('data-prefix','far')
+   }
+}
+
     
