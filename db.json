@@ -1,7 +1,7 @@
 {
-    "breweries":[
+  "breweries": [
     {
-      "id": "1988eb86-f0a2-4674-ba04-02454efa0d31",
+      "id": 1,
       "name": "10 Barrel Brewing Co - Denver",
       "brewery_type": "large",
       "logo": "https://www.handfamilycompanies.com/filebin/images/brewery_logos/10-barrel-logo-square.jpg",
@@ -21,11 +21,11 @@
       "street": "2620 Walnut St"
     },
     {
-      "id": "4ffda196-dd59-44a5-9eeb-5f7fd4b58f5a",
+      "id": 2,
       "name": "105 West Brewing Co",
       "brewery_type": "micro",
-      "logo":"https://static.wixstatic.com/media/796b1a_342595388d17401898f1bc78391f6469~mv2_d_1342_2048_s_2.png",
-      "image":"https://www.bottlemakesthree.com/wp-content/uploads/2019/02/105W-4541-20180728.jpg",
+      "logo": "https://static.wixstatic.com/media/796b1a_342595388d17401898f1bc78391f6469~mv2_d_1342_2048_s_2.png",
+      "image": "https://www.bottlemakesthree.com/wp-content/uploads/2019/02/105W-4541-20180728.jpg",
       "address_1": "1043 Park St",
       "address_2": null,
       "address_3": null,
@@ -41,11 +41,11 @@
       "street": "1043 Park St"
     },
     {
-      "id": "06e9fffb-e820-45c9-b107-b52b51013e8f",
+      "id": 3,
       "name": "12Degree Brewing",
       "brewery_type": "brewpub",
-      "logo":"http://images.squarespace-cdn.com/content/v1/56ca167dc6fc08941fb24c24/1608160551696-B86W8YSC8CG86WV3U0MF/hybrid-test.png",
-      "image":"https://images.otstatic.com/prod1/30774107/4/large.jpg",
+      "logo": "http://images.squarespace-cdn.com/content/v1/56ca167dc6fc08941fb24c24/1608160551696-B86W8YSC8CG86WV3U0MF/hybrid-test.png",
+      "image": "https://images.otstatic.com/prod1/30774107/4/large.jpg",
       "address_1": "820 Main St",
       "address_2": null,
       "address_3": null,
@@ -61,11 +61,11 @@
       "street": "820 Main St"
     },
     {
-      "id": "4b677b60-fef1-42e2-90ef-dadc1bd7fb06",
+      "id": 4,
       "name": "14er Brewing Company",
       "brewery_type": "proprietor",
       "logo": "https://pbs.twimg.com/profile_images/659567813346988032/ToJ_v-3b_400x400.jpg",
-      "image":"https://images.squarespace-cdn.com/content/v1/574e7d97c6fc08047e1098bc/251cba4d-20dd-4700-867f-20c212fbf9e0/20220817_170319.jpg",
+      "image": "https://images.squarespace-cdn.com/content/v1/574e7d97c6fc08047e1098bc/251cba4d-20dd-4700-867f-20c212fbf9e0/20220817_170319.jpg",
       "address_1": "2801 Walnut St",
       "address_2": null,
       "address_3": null,
@@ -81,11 +81,11 @@
       "street": "2801 Walnut St"
     },
     {
-      "id": "a1887b5a-0c21-43cf-9547-527b7c11dcf4",
+      "id": 5,
       "name": "3 Freaks Brewing Co",
       "brewery_type": "micro",
-      "logo":"https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/409905699.3freaksbrewingco.jpg",
-      "image":"https://www.fastglassco.com/uploads/9/0/5/9/90590301/3-freaks-brewery_orig.jpg",
+      "logo": "https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/409905699.3freaksbrewingco.jpg",
+      "image": "https://www.fastglassco.com/uploads/9/0/5/9/90590301/3-freaks-brewery_orig.jpg",
       "address_1": "7140 E County Line Rd",
       "address_2": null,
       "address_3": null,
@@ -101,11 +101,11 @@
       "street": "7140 E County Line Rd"
     },
     {
-      "id": "2f6062af-4d6f-42b2-b4ad-626cf01a1fec",
+      "id": 6,
       "name": "300 Suns Brewing Company",
       "brewery_type": "brewpub",
-      "logo":"https://www.300sunsbrewing.com/wp-content/uploads/2020/09/300-Suns-brewery-longmont-scratch.png",
-      "image":"https://longmontrestaurantweek.com/wp-content/uploads/2019/02/2021_0007_300-Suns-Featured-1024x683-1.jpg",
+      "logo": "https://www.300sunsbrewing.com/wp-content/uploads/2020/09/300-Suns-brewery-longmont-scratch.png",
+      "image": "https://longmontrestaurantweek.com/wp-content/uploads/2019/02/2021_0007_300-Suns-Featured-1024x683-1.jpg",
       "address_1": "335 1st Ave Unit C",
       "address_2": null,
       "address_3": null,
@@ -121,11 +121,11 @@
       "street": "335 1st Ave Unit C"
     },
     {
-      "id": "55de8d28-4231-4497-8ff7-3031e7bb3be5",
+      "id": 7,
       "name": "38 State Brewing",
       "brewery_type": "micro",
-      "logo":"https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/38-state.jpg",
-      "image":"https://media2.westword.com/den/imager/u/slideshow/11351610/38.state.tasters.jpg",
+      "logo": "https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/38-state.jpg",
+      "image": "https://media2.westword.com/den/imager/u/slideshow/11351610/38.state.tasters.jpg",
       "address_1": "8071 S Broadway Ste A",
       "address_2": null,
       "address_3": null,
@@ -141,11 +141,11 @@
       "street": "8071 S Broadway Ste A"
     },
     {
-      "id": "dc652569-19d7-4f63-a999-3e8d5d6798c1",
+      "id": 8,
       "name": "4 Noses Brewing Company",
       "brewery_type": "micro",
-      "logo":"https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/4-noses1.jpg",
-      "image":"https://www.thedenverear.com/wp-content/uploads/2016/05/4Noses_Lobby.jpg",
+      "logo": "https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/4-noses1.jpg",
+      "image": "https://www.thedenverear.com/wp-content/uploads/2016/05/4Noses_Lobby.jpg",
       "address_1": "8855 W 116th Cir Ste 3",
       "address_2": null,
       "address_3": null,
@@ -161,11 +161,11 @@
       "street": "8855 W 116th Cir Ste 3"
     },
     {
-      "id": "dbf0d7e7-4e2c-4574-9dee-791d95496811",
+      "id": 9,
       "name": "4B's Brewery",
       "brewery_type": "brewpub",
-      "logo":"https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/168021886.4bsbrewery.jpg",
-      "image":"https://media-cdn.tripadvisor.com/media/photo-s/0f/f3/8f/66/photo0jpg.jpg",
+      "logo": "https://d2pxm94gkd1wuq.cloudfront.net/BreweryLogos/Standard/168021886.4bsbrewery.jpg",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0f/f3/8f/66/photo0jpg.jpg",
       "address_1": "215 W Main St",
       "address_2": null,
       "address_3": null,
@@ -180,13 +180,12 @@
       "state": "Colorado",
       "street": "215 W Main St"
     },
-    
     {
-      "id": "8824022a-0fd9-4727-b6fa-b7aaf65eb043",
+      "id": 10,
       "name": "7 Hermits Brewing Company",
       "brewery_type": "brewpub",
-      "logo":"https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/7-hermits-300x194.jpg",
-      "image":"https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3456,w_5184,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/IMG_0860_r0jqbt.jpg",
+      "logo": "https://www.coloradobrewerylist.com/wp-content/uploads/2014/02/7-hermits-300x194.jpg",
+      "image": "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3456,w_5184,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/IMG_0860_r0jqbt.jpg",
       "address_1": "PO Box 3186",
       "address_2": null,
       "address_3": null,
@@ -201,5 +200,47 @@
       "state": "Colorado",
       "street": "PO Box 3186"
     }
-    ]
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "imageId": 1,
+      "content": "What a great brewery!"
+    },
+    {
+      "id": 2,
+      "imageId": 1,
+      "content": "Great food!"
+    },
+    {
+      "id": 3,
+      "imageId": 1,
+      "content": "Yea!"
+    },
+    {
+      "id": 4,
+      "imageId": 2,
+      "content": "awesum place"
+    },
+    {
+      "imageId": 1,
+      "content": "test",
+      "id": 5
+    },
+    {
+      "imageId": 6,
+      "content": "lovely place",
+      "id": 6
+    },
+    {
+      "imageId": 2,
+      "content": "love the logo",
+      "id": 7
+    },
+    {
+      "imageId": 1,
+      "content": "the lighting outside is nice",
+      "id": 8
+    }
+  ]
 }

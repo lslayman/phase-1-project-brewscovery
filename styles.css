@@ -87,7 +87,8 @@ main {
 }
 
 h1:hover {
-    transform: scale(1.15);
+    font-size: 23px;
+    font-display: optional;
 }
 .pics_in_row img {
     max-height: 100px;
@@ -98,20 +99,29 @@ h1:hover {
 
 .pics_in_row img:hover {
     transform: scale(1.5);
-    font-weight: 900    ;
 }
 
 /*Left stuff */
 .left-col {    
-    align-self:flex-start;
     margin-top: 20em;
-    width: 13%;
+    border: 2px solid black;
+    padding: 45px;
+    border-radius: 25px;
+    background-color:darksalmon;
+    float: left;
+    position: relative;
+    left: -110px;
 }
 
 /*Mid stuff */
 .mid-col {
     margin-top: 20em;
-    width: 10%;
+    border: 2px solid black;
+    padding: 45px;
+    border-radius: 25px;
+    background-color: goldenrod;
+    position: relative;
+    left: -110px;
 }
 /*Right stuff */
 
@@ -122,5 +132,12 @@ h1:hover {
 }
 .right-col {
     margin-top: 20em;
+    width: 510px;
     flex-grow: 1;
+    border: 2px solid black;
+    padding: 45px;
+    border-radius: 25px;
+    background-color: blanchedalmond;
+    position: relative;
+    left: -110px;
 }

@@ -14,6 +14,8 @@ fetch("http://localhost:3000/breweries")
     fetchPub(all)
 })
 
+
+
 function fetchInfo(data)
 {
     let div = document.querySelector(".pics_in_row")
@@ -35,8 +37,6 @@ function fetchInfo(data)
         logo.addEventListener("click", function() {
             fetchShowcase(obj)
         })
-        
-
     })
 }
 
@@ -102,9 +102,9 @@ function filterResults () {
     cityForm.append(delabelAll)
 
     let br2= document.createElement('br')
-
+    let br3=document.createElement('br')
     cityForm.append(br2)
-
+    cityForm.append(br3)
     deselectAll.addEventListener("change", function() {
         if (this.checked) {
             let allBoxes = document.querySelectorAll('input[type="checkbox"]')
@@ -129,6 +129,9 @@ function filterResults () {
 
         input.setAttribute('type','checkbox')
         input.setAttribute('name',opt)
+        input.checked=true
+        CheckBoxObj.push(all[i])
+        
         input.setAttribute('class','cityClass')
         cityForm.append(input)
         cityForm.append(label)
@@ -185,7 +188,7 @@ function fetchPub(arrayOfPubs) {
     infoContainer.innerHTML=''
     arrayOfPubs.forEach((pub) => {
         let p = document.createElement("p")
-        p.textContent = pub.name
+        p.innerHTML = pub.city.italics() + " - " + pub.name
         p.addEventListener('click',function() {
             fetchShowcase(pub)
         })
@@ -222,4 +225,73 @@ function fetchShowcase(obj) {
     pubInfo.append(p)
     pubInfo.append(phone)
     pubInfo.append(link)
+    
+    let br = document.createElement("br")
+    pubInfo.append(br)
+
+    //comment section
+    let commentTitle = document.createElement("h2")
+    commentTitle.textContent = "Comments"
+    pubInfo.append(commentTitle)
+    
+    fetch("http://localhost:3000/comments")
+    .then(resp => resp.json())
+    .then((data) => {
+        data.forEach((comment) => {
+            if (comment.imageId === obj.id) {
+                let li = document.createElement("li")
+                li.textContent = comment.content
+                pubInfo.append(li)
+            }
+        })
+    })
+    let commentForm = document.createElement("form")
+    commentForm.setAttribute('action','/submit')
+
+    let input = document.createElement('input')
+    input.setAttribute('name','comment')
+    input.setAttribute('type','text')
+    let commentLabel = document.createElement('label')
+    commentLabel.textContent= "Enter a comment: "
+    commentForm.appendChild(commentLabel)
+    commentForm.appendChild(input)
+
+    commentForm.addEventListener('submit',(e) => {
+        e.preventDefault()
+
+        let li = document.createElement("li")
+        li.textContent = input.value
+        pubInfo.append(li)
+        let data = {
+            imageId: obj.id,
+            content: input.value
+        }
+        fetch('http://localhost:3000/comments', {
+            method: "POST",
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error))
+
+        commentForm.reset()
+    })
+
+    pubInfo.append(commentForm)
+
+    let br2 = document.createElement("br")
+    pubInfo.append(br2)
 }
+    
+        // function renderComments(comments) {
+        //     let pubInfo = document.querySelector(".pubInfo")
+        //     comments.forEach((comment) => {
+        //         let li = document.createElement("li")
+        //         li.textContent = comment.content 
+        //         pubInfo.append(li)
+        
+        //     })
+        // }
