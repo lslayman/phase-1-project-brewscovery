@@ -118,6 +118,7 @@ h1:hover {
 .showcase img {
     max-height: 300px;
     max-width: 400px;
+    border: 1px solid black;
 }
 .right-col {
     margin-top: 20em;

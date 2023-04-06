@@ -4,6 +4,7 @@ let brewpubs = []
 let all = []
 let listOfCities = []
 let CheckBoxObj=[]
+
 fetch("http://localhost:3000/breweries")
 .then(resp => resp.json())
 .then(data => {
@@ -60,6 +61,63 @@ function filterResults () {
     })
 
     let cityForm = document.querySelector('.citiesForm')
+    let selectAll = document.createElement('input')
+    selectAll.setAttribute('type','checkbox')
+    selectAll.setAttribute('name','all')
+    selectAll.checked = true
+    //selectAll.onclick = toggle(this)
+    let labelAll = document.createElement('label')
+    labelAll.htmlFor = "all"
+    labelAll.innerHTML = "Select all"
+    cityForm.append(selectAll)
+    cityForm.append(labelAll)
+
+    selectAll.addEventListener("change",function() {
+        if (this.checked) {
+            let allBoxes = document.querySelectorAll('.cityClass')
+            for (let i = 0; i<all.length;i++) {
+                CheckBoxObj.push(all[i])
+
+            }
+
+            allBoxes.forEach((box) => {
+                box.checked = true
+
+                fetchPub(CheckBoxObj)
+            })
+        
+        }
+    })
+    let br = document.createElement('br')
+
+    cityForm.append(br)
+
+    let deselectAll = document.createElement('input')
+    deselectAll.setAttribute('type','checkbox')
+    deselectAll.setAttribute('name','deall')
+    let delabelAll = document.createElement('label')
+    delabelAll.htmlFor = "deall"
+    delabelAll.innerHTML = "Deselect all"
+    cityForm.append(deselectAll)
+    cityForm.append(delabelAll)
+
+    let br2= document.createElement('br')
+
+    cityForm.append(br2)
+
+    deselectAll.addEventListener("change", function() {
+        if (this.checked) {
+            let allBoxes = document.querySelectorAll('input[type="checkbox"]')
+            CheckBoxObj = []
+
+            allBoxes.forEach((box) => {
+                box.checked = false
+                let infoContainer = document.querySelector(".info")
+
+                infoContainer.innerHTML=''
+            })
+        }
+    })
     for (let i=0; i<listOfCities.length-1;i++) {
         let br = document.createElement('br')
 
@@ -71,6 +129,7 @@ function filterResults () {
 
         input.setAttribute('type','checkbox')
         input.setAttribute('name',opt)
+        input.setAttribute('class','cityClass')
         cityForm.append(input)
         cityForm.append(label)
         cityForm.append(br)
@@ -85,6 +144,11 @@ function filterResults () {
     }
 }
 
+// function toggle(source) {
+//     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+//   for(let checkbox in checkboxes) 
+//     checkbox.checked = source.checked;
+// }
 function fetchPubsByCity(cityName) {
     for (let i = 0; i<listOfCities.length-1;i++) {
         if (cityName === listOfCities[i]) {
