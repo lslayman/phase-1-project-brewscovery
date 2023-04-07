@@ -1,0 +1,156 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background-image: url("https://img.freepik.com/free-vector/abstract-colorful-background-with-fluid-shapes_1393-314.jpg?w=900&t=st=1680625174~exp=1680625774~hmac=44c3980d3fc18573d510890ab31b3d13198ad980a33863f659862b8bac842a00");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+header img {
+    max-width: 300px;
+    max-height: 200px;
+    
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 3.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a:hover:before {
+    width:35%;
+    color: black;
+}
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    bottom: -6px;
+    transition: width .3s;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+/*Main items */
+
+main {
+    display: flex;
+    gap: 8em;
+    margin-top: 1em;
+    flex: 1 3;
+}
+
+.pics_in_row {
+    height: 100px;
+    max-height: 100px;
+    max-width: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;    
+}
+
+h1:hover {
+    font-size: 23px;
+    font-display: optional;
+}
+.pics_in_row img {
+    max-height: 100px;
+    max-width: 100px;
+    padding: 10px;
+    transition: transform .2s;
+}
+
+.pics_in_row img:hover {
+    transform: scale(1.5);
+}
+
+/*Left stuff */
+.left-col {    
+    margin-top: 20em;
+    padding: 45px;
+    border-radius: 25px;
+    background-color:darksalmon;
+    float: left;
+    position: relative;
+    left: -110px;
+    background: rgba(255, 122, 89, .7);
+}
+
+/*Mid stuff */
+.mid-col {
+    margin-top: 20em;
+    padding: 45px;
+    border-radius: 25px;
+    background-color: goldenrod;
+    position: relative;
+    left: -110px;
+    background: rgba(255, 122, 89, .7);
+}
+/*Right stuff */
+
+.showcase img {
+    max-height: 300px;
+    max-width: 400px;
+    border: 1px solid black;
+}
+.right-col {
+    margin-top: 20em;
+    width: 510px;
+    flex-grow: 1;
+    padding: 45px;
+    border-radius: 25px;
+    position: relative;
+    left: -110px;
+    background: rgba(255, 122, 89, .7);
+}

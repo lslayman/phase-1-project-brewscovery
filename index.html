@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Brewscovery</title>
-    <script>
-      window.FontAwesomeConfig = {autoReplaceSvg: "nest"}
-    </script>
 
     <script defer src="index.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -14,11 +11,62 @@
   <body>
     <div class = "container">
       <h1>Brewscovery</h1>
-      <div id="div" class="pics_in_row">
 
-      </div>
-      <div class ="below-imgs">
-        <div class="rating-box">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/009/886/738/original/cute-cartoon-beer-mug-file-png.png" type="image/icon type">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <div class="overlay"></div>
+  <div class="wrapper">
+    <header>
+        <a href="#"><img src="https://i.ibb.co/7RY037c/Screenshot-2023-04-04-at-11-03-38-AM-fotor-bg-remover-20230404143634.png" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Notifications</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="pics_in_row"></div>
+        <div class="left-col">
+            <h1>Brewery Filters</h1>
+            <p class="subhead">Customize your preferences below</p>
+            <div class="filters">
+                <h2>Pub types</h2>
+                <select class="pubFilters">
+                    <option value="all">all</option>
+                    <option value="micropubs">micropubs</option>
+                    <option value="brewpubs">brewpubs</option>
+                    <option value="large">large</option>
+                </select>
+                <h2>Cities</h2>
+                <form class="citiesForm">
+                    
+                </form>
+
+                <!--<ul class="pubs"><h2>Pub types</h2></ul>
+                <li class="all">all</li>
+                <li class="micros">micros</li>
+                <li class="brewpubs">brewpubs</li>
+                <li class="large">large</li> 
+                -->
+                
+            </div>
+            
+        </div>    
+        <div class="mid-col">
+            <h1>Breweries</h1>
+            <div class="info"></div>
+        </div>
+        <div class="right-col">
+            <div class="showcase"></div>
+                    <div class="rating-box">
           <header>Rate this brewery!</header>
           <span class="mugs" style="width: 20rem">
             <i id="regular" class="fa-regular fa-star"></i>
@@ -28,29 +76,9 @@
             <i id="regular" class="fa-regular fa-star"></i>
           </span>
         </div>
-
-      
+            <div class="pubInfo"></div>
         </div>
-            <div class="filters">
-            <ul class="pubs">
-                <li class="micros">micros</li>
-                <li class="brewpubs">brewpubs</li>
-                <li class="large">large</li>
-            </ul>
-            <div class="info"></div>
-            <div class ="showcase">
-
-              <form id="brewery-form">
-                <label for="uname">Username</label><br>
-                <input type="text" id="uname" name="uname"><br>
-                <label for="comment">Add Comment</label><br>
-                <input type="text" id="comment" name="comment">
-              </form>
-
-            </div>
-        
-        </div>
-
-      </div>
-  </div>
-  </body>
+    </main>
+    <br>
+</div>
+    
