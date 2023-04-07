@@ -1,3 +1,4 @@
+
 let micropubs = []
 let large = []
 let brewpubs = []
@@ -5,14 +6,21 @@ let all = []
 let listOfCities = []
 let CheckBoxObj=[]
 
+
 fetch("http://localhost:3000/breweries")
 .then(resp => resp.json())
 .then(data => {
     fetchInfo(data)
     fetchShowcase(data[0])
     filterResults()
+
+
+})
+
+
     fetchPub(all)
 })
+
 
 
 
@@ -20,8 +28,11 @@ function fetchInfo(data)
 {
     let div = document.querySelector(".pics_in_row")
     data.forEach((obj) => {
+
+
         listOfCities.push(obj.city)
         all.push(obj)
+
         if (obj.brewery_type === "large") {
             large.push(obj)
         }
@@ -31,12 +42,15 @@ function fetchInfo(data)
         else if (obj.brewery_type === "micro") {
             micropubs.push(obj)
         }
+
+
         let logo = document.createElement("img")
         logo.src = obj.logo
         div.append(logo)
         logo.addEventListener("click", function() {
             fetchShowcase(obj)
         })
+
     })
 }
 
@@ -170,18 +184,12 @@ function removePubsByCity(cityName) {
 
 }
 
+
 function fetchPub(arrayOfPubs) {
     let infoContainer = document.querySelector(".info")
     infoContainer.innerHTML=''
     arrayOfPubs.forEach((pub) => {
         let p = document.createElement("p")
-        p.innerHTML = pub.city.italics() + " - " + pub.name
-        p.addEventListener('click',function() {
-            fetchShowcase(pub)
-        })
-        infoContainer.append(p)
-    })
-}
 
 function fetchShowcase(obj) {
     let showcase = document.querySelector(".showcase")
@@ -278,11 +286,11 @@ const beerRating = [...document.getElementsByClassName("fa-regular")]
 
 function rateBrewery(stars) {
     const starsLength = stars.length;
-    let i;
     stars.map((beerRating) => {
        beerRating.onclick = () => {
         star_index = stars.indexOf(beerRating);
         console.log(star_indx)
+
         for (let i = 0; i < starsLength; i++) {
             if (i <= star_index){
                 stars[i].firstChild.setAttribute('data-prefix','fas')
@@ -290,6 +298,7 @@ function rateBrewery(stars) {
                 stars[i].firstChild.setAttribute('data-prefix','far')
             }
           }
+
         }
     })
 }
@@ -297,10 +306,17 @@ rateBrewery(beerRating);
 
 function setRating(beerRating) {
     if(beerRating.firstChild.getAttribute('data-prefix')==='far') {
+
+        //This changes to colored
         beerRating.firstChild.setAttribute('data-prefix','fas')
     } else {
+        //uncolored
+
+        beerRating.firstChild.setAttribute('data-prefix','fas')
+    } else {
+
     beerRating.firstChild.setAttribute('data-prefix','far')
    }
 }
 
-    
+

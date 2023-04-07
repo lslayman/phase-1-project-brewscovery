@@ -1,4 +1,3 @@
-{
   "breweries": [
     {
       "id": 1,
@@ -242,5 +241,6 @@
       "content": "the lighting outside is nice",
       "id": 8
     }
+
   ]
 }
